@@ -24,7 +24,7 @@
     printf("Digite a quantidade de pontos turisticos dessa cidade abaixo: \n");
     scanf("%d", &pturisticos1);
 
-    //variaveis com calculos da primeira carta
+    //variaveis com calculos de densidade e renda percapita da primeira carta
     densidade1 = (float)populacao1 / area1;
     percapita1 = (float)(pib1 / populacao1);
 
@@ -59,7 +59,7 @@
     printf("Digite a quantidade de pontos turisticos dessa cidade abaixo: \n");
     scanf("%d", &pturisticos2);
 
-    //variaveis com calculos da segunda carta
+    //variaveis com calculos de densidade e renda percapita da segunda carta
     densidade2 = (float)populacao2 / area2;
     percapita2 = (float)(pib2 / populacao2);
 
@@ -75,6 +75,8 @@
     printf("Densidade Populacional: %.2f habitantes por Km²\n", densidade2);
     printf("Renda Per Capita: R$ %.2f\n", percapita2);
 
+
+    //cálculo dos superpoderes das cartas 
     superpoder1 = (populacao1 + area1 + pib1 + pturisticos1 + percapita1) - (densidade1);
     superpoder2 = (populacao2 + area2 + pib2 + pturisticos2 + percapita2) - (densidade2);
    
