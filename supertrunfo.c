@@ -4,7 +4,8 @@
     //variáveis para armazenar os dados
     char estado1[40], estado2[40], codigo1[20], codigo2[20], cidade1[40], cidade2[40];
     int populacao1, populacao2, pturisticos1, pturisticos2;
-    float area1, area2, pib1, pib2, densidade1, densidade2, percapita1, percapita2;
+    float area1, area2, pib1, pib2, densidade1, densidade2, percapita1, percapita2, superpoder1, superpoder2;
+    
 
 
     //campos para o usuário digitar as informações do primeiro estado
@@ -73,6 +74,19 @@
     printf("Pontos Turisticos: %d\n", pturisticos2);
     printf("Densidade Populacional: %.2f habitantes por Km²\n", densidade2);
     printf("Renda Per Capita: R$ %.2f\n", percapita2);
+
+    superpoder1 = (populacao1 + area1 + pib1 + pturisticos1 + percapita1) - (densidade1);
+    superpoder2 = (populacao2 + area2 + pib2 + pturisticos2 + percapita2) - (densidade2);
+   
+    //comparação das cartas
+    printf("Comparação entre as cartas:\n");
+    printf("Comparando a população: (1 para verdadeiro – Carta 1 vence – e 0 para falso – Carta 2 vence).: %d\n", (populacao1 > populacao2));
+    printf("Comparando a área: (1 para verdadeiro – Carta 1 vence – e 0 para falso – Carta 2 vence).: %d\n", (area1 > area2));
+    printf("Comparando o PIB: (1 para verdadeiro – Carta 1 vence – e 0 para falso – Carta 2 vence).: %d\n", (pib1 > pib2));
+    printf("Comparando os pontos turisticos: (1 para verdadeiro – Carta 1 vence – e 0 para falso – Carta 2 vence).: %d\n", (pturisticos1 > pturisticos2));
+    printf("Comparando a densidade populacional: (1 para verdadeiro – Carta 1 vence – e 0 para falso – Carta 2 vence).: %d\n", (densidade1 < densidade2));
+    printf("Comparando os superpoderes: (1 para verdadeiro – Carta 1 vence – e 0 para falso – Carta 2 vence).: %d\n", (superpoder1 > superpoder2));
+
 
     return 0;
     }
