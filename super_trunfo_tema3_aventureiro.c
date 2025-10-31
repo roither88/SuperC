@@ -49,7 +49,7 @@
     printf("Digite sua escolha: ");
     scanf("%d", &escolha);
 
-    // Comparações de população entre as cartas
+    // Comparações de atributos entre as cartas
     switch (escolha)
     {
     case 1:
